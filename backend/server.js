@@ -24,11 +24,11 @@ app.post('/api/verify', async (req, res) => {
 
     try {
         const { data: user, error } = await supabase
-            .from('users') // Assure-toi que le nom de ta table est correct
-            .select('id_user, name, username, date_birth') // Sélectionne les colonnes correspondantes
+            .from('birthday') // Assure-toi que le nom de ta table est correct
+            .select('id, name, username, date_of_birth') // Sélectionne les colonnes correspondantes
             .eq('name', name)
             .eq('username', username)
-            .eq('date_birth', date)
+            .eq('date_of_birth', date)
             .single();
             console.log(); // Log pour vérifier la réponse de Supabase
         if (error || !user) {

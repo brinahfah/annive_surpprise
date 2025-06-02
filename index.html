@@ -18,7 +18,7 @@
         </div>
         <div>
             <label for="date_birth">Date:</label>
-            <input type="date" id="date_birth" name="date_birth" required autocomplete="bday">
+            <input type="date" id="date_of_birth" name="date_of_birth" required autocomplete="bday">
         </div>
         <button type="submit">Click</button>
         <div id="message"></div>
@@ -30,7 +30,7 @@
 
             const name = document.getElementById('name').value;
             const username = document.getElementById('username').value;
-            const date = document.getElementById('date_birth').value;
+            const date = document.getElementById('date_of_birth').value;
             const messageElement = document.getElementById('message');
 
             console.log('Données envoyées :', { name, username, date }); // Vérifiez ces valeurs
